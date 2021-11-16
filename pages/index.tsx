@@ -4,7 +4,7 @@ import firebaseApp from '../firebase/firebaseClient'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { createCheckoutSession } from '../stripe/createCheckoutSession'
 import usePremiumStatus from '../stripe/usePremiumStatus'
-import { getAuth } from '@firebase/auth'
+import { getAuth, signOut } from '@firebase/auth'
 
 export default function Home() {
 
@@ -18,6 +18,7 @@ export default function Home() {
       {user && !userLoading && (
         <div>
           <h1>Hello, {user.displayName}</h1>
+          <button onClick={() => signOut(getAuth())}>Sign out</button>
           {!userIsPremium? (
             <button onClick={() => createCheckoutSession(user.uid)}>Upgrade to premium!</button>
           ):(
