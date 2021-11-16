@@ -1,4 +1,5 @@
-<h1 align="center">My-delivery</h1>
+<h1 align="center">My-platform</h1>
+<h3 align="center">🚧 Projeto em construção... 🚧</h3>
 
 <p align="center">Esse projeto é uma plataforma de cursos com seção para membros free e premium.</p>
 
@@ -13,7 +14,7 @@
 ### Features
 - [x] Sincronização entre o Firebase e o Stripe (webhook)
 - [x] Login social
-- [x] Login cacheado
+- [x] Login em cache
 - [x] Totalmente responsivo
 - [x] Checkout online
 
