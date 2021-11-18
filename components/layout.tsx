@@ -10,8 +10,8 @@ const Wrapper = styled.div`
     overflow: hidden;
 
     .home__image {
-        height: 100vh;
-        width: calc(813/673*100vh);
+        height: 90vh;
+        width: calc(813/673*90vh);
     }
 
     .home__actions {
