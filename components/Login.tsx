@@ -133,7 +133,7 @@ const Login = () => {
             <form className="form" onSubmit={signInWithEmail}>
                 <label className="form__label">Login</label>
                 <input className="form__input" type="text" name="email" onChange={handleChange} value={userData.email} placeholder="e-mail"/>
-                <input className="form__input" type="password" name="password" onChange={handleChange} value={userData.password} placeholder="senha"/>
+                <input className="form__input" type="password" autoComplete="current-password" name="password" onChange={handleChange} value={userData.password} placeholder="senha"/>
                 <div className="form__actions">
                     <div className="form__utilities">
                         <Link href="/signUp">Criar conta</Link>

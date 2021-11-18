@@ -1,10 +1,11 @@
-import { createUserWithEmailAndPassword, getAuth } from '@firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, updateProfile } from '@firebase/auth';
 import { doc, setDoc } from '@firebase/firestore';
 import React, { useState } from 'react';
 import Layout from '../components/layout';
 import firebaseApp, { db } from '../firebase/firebaseClient';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 const Wrapper = styled.div`
     display: flex;
@@ -84,6 +85,7 @@ const SignUp = () => {
 
     firebaseApp
     const auth = getAuth()
+    const router = useRouter()
     const [userData, setUserData] = useState({
         nome: '',
         email: '',
@@ -105,7 +107,6 @@ const SignUp = () => {
         .then((result) => {
 
             const user = result.user
-            console.log(user)
             setDoc(doc(db, "users", user.uid), {
                 uid: user.uid,
                 email: user.email,
@@ -113,6 +114,10 @@ const SignUp = () => {
                 provider: user.providerData[0].providerId,
                 photoUrl: user.photoURL
             })
+            updateProfile(auth.currentUser, {
+                displayName: userData.nome
+            })
+            router.push('/platform')
 
         }).catch((error) => {
             setMessage(error.code)

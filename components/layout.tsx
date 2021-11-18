@@ -35,7 +35,7 @@ const Layout: React.FC = ({children}) => {
                     { children }
                 </div>
                 <div className="home__image">
-                    <Image alt="" layout="responsive" src={cover} />
+                    <Image alt="" priority layout="responsive" src={cover} />
                 </div>
             </Wrapper>
         </Container>
