@@ -15,6 +15,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-firebase-hooks": "^4.0.1",
+    "stripe": "^8.190.0",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
