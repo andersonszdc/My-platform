@@ -6,6 +6,8 @@ import firebaseApp, { db } from '../firebase/firebaseClient';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import createCustomer from '../stripe/createCustomer';
+import createCheckoutSession from '../stripe/createCheckoutSession';
 
 const Wrapper = styled.div`
     display: flex;
@@ -118,6 +120,7 @@ const SignUp = () => {
                 displayName: userData.nome
             })
             .then(() => {
+                createCheckoutSession(user.uid)
                 router.push('/platform')
             })
 
