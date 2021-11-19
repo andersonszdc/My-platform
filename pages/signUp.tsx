@@ -117,7 +117,9 @@ const SignUp = () => {
             updateProfile(auth.currentUser, {
                 displayName: userData.nome
             })
-            router.push('/platform')
+            .then(() => {
+                router.push('/platform')
+            })
 
         }).catch((error) => {
             setMessage(error.code)
