@@ -14,7 +14,7 @@ const Checkout: React.FC = () => {
     const elements = useElements()
 
     if(!stripe || !elements) {
-        return;
+        return <div>Indisponível</div>;
     }
 
     const handleSubmit = async (e: any) => {
@@ -67,7 +67,6 @@ const Checkout: React.FC = () => {
     }
 
     return (
-        <>
         <form onSubmit={handleSubmit}>
 
             <CardElement options={CARD_ELEMENT_OPTIONS} />
@@ -76,7 +75,6 @@ const Checkout: React.FC = () => {
 
             <div id='error-message'>{message}</div>
         </form>
-        </>
     );
 }
 
