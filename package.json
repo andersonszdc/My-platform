@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.6.0",
     "@stripe/stripe-js": "^1.21.1",
     "firebase": "^9.4.1",
     "firebase-react-hooks": "^0.8.0",
