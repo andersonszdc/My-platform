@@ -2,7 +2,6 @@ import { getAuth, signOut } from '@firebase/auth';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import createCheckoutSession from '../stripe/createCheckoutSession';
 import createSubscription from '../stripe/createSubscription';
 import usePremiumStatus from '../stripe/usePremiumStatus';
 
@@ -28,8 +27,6 @@ const Platform: React.FC = () => {
 
     const goToCheckout = (e: any) => {
         e.preventDefault()
-        
-        createCheckoutSession(user.uid)
         createSubscription(user.uid)
         .then((res) => {
             setClientSecret(res.latest_invoice.payment_intent.client_secret)
