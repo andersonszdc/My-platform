@@ -2,7 +2,7 @@ import { getAuth, sendPasswordResetEmail } from '@firebase/auth';
 import React, { useState } from 'react';
 import firebaseApp from '../firebase/firebaseClient';
 import { useRouter } from 'next/router';
-import Layout from '../components/layout';
+import { LayoutLogin } from '../components/layouts';
 import styled from 'styled-components';
 import Link from 'next/link';
 
@@ -111,6 +111,6 @@ const Forget = () => {
   );
 }
 
-Forget.layout = Layout
+Forget.layout = LayoutLogin
 
 export default Forget;

@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword, getAuth, updateProfile } from '@firebase/auth';
 import { doc, setDoc } from '@firebase/firestore';
 import React, { useState } from 'react';
-import Layout from '../components/layout';
+import { LayoutLogin } from '../components/layouts';
 import firebaseApp, { db } from '../firebase/firebaseClient';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -143,6 +143,6 @@ const SignUp = () => {
     );
 }
 
-SignUp.layout = Layout
+SignUp.layout = LayoutLogin
 
 export default SignUp;

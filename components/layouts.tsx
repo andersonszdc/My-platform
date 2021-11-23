@@ -2,8 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import cover from '../assets/home-cover.png';
+import NavBar from './NavBar';
 
-const Wrapper = styled.div`
+const WrapperLogin = styled.div`
     display: flex;
     justify-content: center;
     border-radius: 16px;
@@ -20,26 +21,48 @@ const Wrapper = styled.div`
     }
 `
 
-const Container = styled.div`
+const ContainerLogin = styled.div`
     display: flex;
     justify-content: center;
     height: 100vh;
     align-items: center;
 `
 
-const Layout: React.FC = ({children}) => {
+const WrapperNavBar = styled.div`
+    display: flex;
+    padding: 32px;
+    gap: 32px;
+    height: 100%;
+`
+
+const ContainerNavBar = styled.div`
+    height: 100vh;
+`
+
+export const LayoutLogin: React.FC = ({children}) => {
     return (
-        <Container>  
-            <Wrapper>
+        <ContainerLogin>  
+            <WrapperLogin>
                 <div className="home__actions">
                     { children }
                 </div>
                 <div className="home__image">
                     <Image alt="" priority layout="responsive" src={cover} />
                 </div>
-            </Wrapper>
-        </Container>
+            </WrapperLogin>
+        </ContainerLogin>
     );
 }
 
-export default Layout;
+export const LayoutNavBar: React.FC = ({children}) => {
+    return (
+        <ContainerNavBar>  
+            <WrapperNavBar>
+                <NavBar/>
+                <div>
+                    { children }
+                </div>
+            </WrapperNavBar>
+        </ContainerNavBar>
+    );
+}

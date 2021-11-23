@@ -2,10 +2,11 @@ import { getAuth, signOut } from '@firebase/auth';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { LayoutNavBar } from '../components/layouts';
 import createSubscription from '../stripe/createSubscription';
 import usePremiumStatus from '../stripe/usePremiumStatus';
 
-const Platform: React.FC = () => {
+const Platform = () => {
 
     const router = useRouter()
     const [user] = useAuthState(getAuth())
@@ -52,5 +53,7 @@ const Platform: React.FC = () => {
         </div>
     );
 }
+
+Platform.layout = LayoutNavBar
 
 export default Platform;

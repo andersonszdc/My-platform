@@ -1,7 +1,7 @@
 import Login from '../components/Login'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { getAuth } from '@firebase/auth'
-import Layout from '../components/layout'
+import { LayoutLogin } from '../components/layouts'
 import { useRouter } from 'next/router'
 
 export default function Home() {
@@ -18,5 +18,5 @@ export default function Home() {
   )
 }
 
-Home.layout = Layout
+Home.layout = LayoutLogin
 
