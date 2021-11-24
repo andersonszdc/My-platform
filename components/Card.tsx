@@ -42,7 +42,7 @@ const Card: React.FC = () => {
                 <h2 className="infos__title">Fundamentos do Design</h2>
                 <h3 className="infos__teacher">by Linde</h3>
             </div>
-            <Percentage />
+            <Progress />
             <div className="card__class">
                 <h3 className="class__completed">8/12 aulas</h3>
                 <Arrow />
@@ -53,48 +53,62 @@ const Card: React.FC = () => {
 
 export default Card;
 
-const WrapperPercentage = styled.div`
-    display: flex;
+type ProgressProps = {
+    progress: Number
+    circ: number
+    strokeWidth: number
+    r: number
+}
+
+const WrapperProgress = styled.div<ProgressProps>`
+${props => `
+    display: inline-flex;
     position: relative;
-    justify-content: center;
+    justify-content: left;
+    transition: all .5s ease-in-out;
     svg {
         position: relative;
-        width: 150px;
-        height: 150px;
         z-index: 1000;
     }
     svg circle {
         width: 100%;
         height: 100%;
-        fill: black;
-        stroke-width: 10;
+        fill: gray;
         stroke-linecap: round;
-        stroke-dasharray: calc(439);
-        stroke-dashoffset: calc(439 - (439*15/100));
-        stroke: blue;
+        stroke-width: ${props.strokeWidth};
+        stroke-dasharray: ${props.circ};
+        stroke-dashoffset: calc(${props.circ} - (${props.circ}*${props.progress}/100));
+        stroke: pink;
     }
     .number {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: calc(${2*props.r}px + ${props.strokeWidth}px);
+        height: calc(2*${props.r}px + ${props.strokeWidth}px);
         align-items: center;
         justify-content: center;
         display: flex;
         z-index: 2000;
-        color: blue;
-
+        color: pink;
+        font-size: 1rem;
     }
+`}
 `
+    
+    const Progress = () => {
 
-const Percentage = () => {
+    const raio = 35
+    const strokeWidth = 4
+    const progress = 90
+    const circ = 2*raio*Math.PI
+    
     return (
-        <WrapperPercentage>
-            <svg>
-                <circle r="70" cx="75" cy="75"/>
+        <WrapperProgress r={raio} strokeWidth={strokeWidth} circ={circ} progress={progress}>
+            <svg width={2*raio + strokeWidth} height={2*raio + strokeWidth}>
+                <circle r={raio} cx={raio+strokeWidth/2} cy={raio+strokeWidth/2}/>
             </svg>
             <div className="number">
-                <h2>90%</h2>
+                {progress}%
             </div>
-        </WrapperPercentage>
+        </WrapperProgress>
     )
 }
