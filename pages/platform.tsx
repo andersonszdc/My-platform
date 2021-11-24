@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { LayoutNavBar } from '../components/layouts';
 import createSubscription from '../stripe/createSubscription';
 import usePremiumStatus from '../stripe/usePremiumStatus';
+import Slider from '../components/Modules';
 
 const Platform = () => {
 
@@ -50,6 +51,7 @@ const Platform = () => {
             ):(
                 <h2>Have a cookie Premium customer!</h2>
             )}
+            <Slider />
         </div>
     );
 }

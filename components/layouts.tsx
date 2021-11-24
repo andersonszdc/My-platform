@@ -33,6 +33,9 @@ const WrapperNavBar = styled.div`
     padding: 32px;
     gap: 32px;
     height: 100%;
+    .content {
+        width: 100%;
+    }
 `
 
 const ContainerNavBar = styled.div`
@@ -59,7 +62,7 @@ export const LayoutNavBar: React.FC = ({children}) => {
         <ContainerNavBar>  
             <WrapperNavBar>
                 <NavBar/>
-                <div>
+                <div className="content">
                     { children }
                 </div>
             </WrapperNavBar>
