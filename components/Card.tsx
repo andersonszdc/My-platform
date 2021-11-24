@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import Arrow from '../assets/Arrow';
 
 const Wrapper = styled.div`
-    display: inline-flex;
+    flex-shrink: 0;
+    min-width: 15%;
+    display: flex;
     flex-direction: column;
     padding: 1.5rem;
     border-radius: 1.5rem;
@@ -14,6 +16,7 @@ const Wrapper = styled.div`
     .infos__title {
         font-size: 14px;
         font-weight: 600;
+        white-space: nowrap;
     }
     
     .infos__teacher {

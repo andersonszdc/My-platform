@@ -3,54 +3,47 @@ import styled from 'styled-components';
 import Arrow from '../assets/Arrow';
 import Card from './Card';
 
-const Slide = styled.div`
-    display: flex;
-    gap: .5rem;
-    white-space: nowrap;
-    overflow-x: visible;
-    transition: 0.8s ease-in-out;
-`
-
-const WrapSlide = styled.div`
-  overflow-x: hidden;
-  width: 100%;
-`
-
-const Modules = styled.div`
+const Header = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  justify-content: space-between;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 32px;
+  .header__title {
+    font-size: 20px;
+    font-weight: 500;
   }
 
-  .header-btns {
+  .header__btns {
     display: flex;
     align-items: center;
     gap: 32px;
   }
 
-  .btn-left, .btn-right {
+  .btn__back, .btn__forward {
     display: inline-flex;
     background-color: white;
     border-radius: 8px;
   }
 `
 
-const Slider: React.FC = () => {
+const Slide = styled.div`
+  display: flex;
+  gap: 1rem;
+  transition: all .5s ease-in-out;
+`
+
+const Index: React.FC = () => {
 
   const slideRef = useRef(null)
   const [translate, setTranslate] = useState(0)
 
   const leftClick = () => {
-    setTranslate(t => t + 520)
+    setTranslate(t => t + 820)
   }
 
   const rightClick = () => {
-    setTranslate(t => t - 520)
+    setTranslate(t => t - 820)
   }
 
   useEffect(() => {
@@ -58,30 +51,30 @@ const Slider: React.FC = () => {
   })
 
   return (
-    <Modules>
-      <div className="header">
-        <h2 className="header-text">Módulos</h2>
-        <div className="header-btns">
-          <div onClick={leftClick} className="btn-left">
+    <>
+      <Header>
+        <h2 className="header__title">Módulos</h2>
+        <div className="header__btns">
+          <div onClick={leftClick} className="btn__back">
             <Arrow />
           </div>
-          <div onClick={rightClick} className="btn-right">
+          <div onClick={rightClick} className="btn__forward">
             <Arrow />
           </div>
         </div>
-      </div>
-      <WrapSlide>
-        <Slide ref={slideRef}>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-        </Slide>
-      </WrapSlide>
-    </Modules>
+      </Header>
+      <Slide ref={slideRef}>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </Slide>
+    </>
   );
 }
 
-export default Slider;
+export default Index;

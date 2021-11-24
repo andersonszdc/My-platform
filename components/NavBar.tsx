@@ -1,3 +1,5 @@
+import { getAuth, signOut } from '@firebase/auth';
+import { useRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 import House from '../assets/House';
@@ -15,13 +17,24 @@ const Wrapper = styled.div`
 `
 
 const NavBar: React.FC = () => {
-  return (
-      <Wrapper>
-          <House />
-          <Setting />
-          <Logout />
-      </Wrapper>
-  );
+    const router = useRouter()
+    const SignOut = () => {
+        signOut(getAuth())
+        .then(() => {
+            router.push('/')
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
+    return (
+        <Wrapper>
+            <House />
+            <Setting />
+            <div onClick={SignOut}>
+                <Logout />
+            </div>
+        </Wrapper>
+    );
 }
 
 export default NavBar;

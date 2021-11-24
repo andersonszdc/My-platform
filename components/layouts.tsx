@@ -28,20 +28,6 @@ const ContainerLogin = styled.div`
     align-items: center;
 `
 
-const WrapperNavBar = styled.div`
-    display: flex;
-    padding: 32px;
-    gap: 32px;
-    height: 100%;
-    .content {
-        width: 100%;
-    }
-`
-
-const ContainerNavBar = styled.div`
-    height: 100vh;
-`
-
 export const LayoutLogin: React.FC = ({children}) => {
     return (
         <ContainerLogin>  
@@ -57,15 +43,24 @@ export const LayoutLogin: React.FC = ({children}) => {
     );
 }
 
+const WrapperNavBar = styled.div`
+    display: flex;
+    margin: 32px;
+    gap: 32px;
+    height: calc(100vh - 64px);
+    .content {
+        width: 100%;
+        overflow: hidden;
+    }
+`
+
 export const LayoutNavBar: React.FC = ({children}) => {
-    return (
-        <ContainerNavBar>  
+    return (  
             <WrapperNavBar>
                 <NavBar/>
                 <div className="content">
                     { children }
                 </div>
             </WrapperNavBar>
-        </ContainerNavBar>
     );
 }
