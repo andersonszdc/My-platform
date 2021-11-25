@@ -35,10 +35,8 @@ $ git clone https://github.com/andersonszdc/My-platform
 $ cd My-platform
 
 # Faça uma cópia de '.env.example' para '.env.local'
-# Coloque sua credencial da API do Prismic
+# Coloque sua chaves
 $ copy .env.example .env.local
-
-# Coloque suas chaves do Firebase e Stripe
 
 # Instale as dependências
 $ npm install

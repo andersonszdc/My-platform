@@ -5,13 +5,17 @@ import Arrow from '../assets/Arrow';
 const Wrapper = styled.div`
     flex-shrink: 0;
     min-width: 15%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     padding: 1.5rem;
     border-radius: 1.5rem;
     background-color: aliceblue;
     aspect-ratio: 1;
-    justify-content: space-between;
+    border: 1px solid black;
+
+    .card__infos {
+        margin-bottom: .75rem;
+    }
     
     .infos__title {
         font-size: 14px;
@@ -27,6 +31,7 @@ const Wrapper = styled.div`
     .card__class {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .class__completed {
@@ -100,7 +105,7 @@ ${props => `
     const strokeWidth = 4
     const progress = 90
     const circ = 2*raio*Math.PI
-    
+
     return (
         <WrapperProgress r={raio} strokeWidth={strokeWidth} circ={circ} progress={progress}>
             <svg width={2*raio + strokeWidth} height={2*raio + strokeWidth}>
