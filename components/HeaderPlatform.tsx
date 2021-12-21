@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+import profile from '../assets/profile.png';
 
 const Wrapper = styled.div`
     display: flex;
@@ -25,15 +26,16 @@ const Wrapper = styled.div`
     }
     .perfil__img {
         border-radius: 1rem;
+        background-color: white;
     }
 `
 
 const HeaderPlatform = ({user}: any) => {
   return (
     <Wrapper>
-        <h1 className="header__morning">Bom dia, {user.displayName}!</h1>
+        <h1 className="header__morning">Olá, {user.displayName}!</h1>
         <div className="header__perfil">
-            <Image className="perfil__img" width="75" height="75" src={user.photoURL} alt='' />
+            <Image className="perfil__img" width="75" height="75" src={user.photoURL || profile} alt='' />
             <h1 className="perfil__name">{user.displayName}</h1>
         </div>
     </Wrapper>

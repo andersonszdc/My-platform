@@ -6,6 +6,19 @@ import { LayoutNavBar } from '../components/layouts';
 import createSubscription from '../stripe/createSubscription';
 import usePremiumStatus from '../stripe/usePremiumStatus';
 import HeaderPlatform from '../components/HeaderPlatform';
+import styled from 'styled-components';
+
+const UpgradeBtn = styled.button`
+    background-color: #F72585;
+    color: #FFF;
+    padding: 12px 24px;
+    border-radius: 16px;
+    border: none;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+`
 
 const Platform = () => {
 
@@ -37,7 +50,7 @@ const Platform = () => {
         <div>
             <HeaderPlatform user={user} />
             {!userIsPremium? (
-                <button onClick={goToCheckout}>Upgrade to premium!</button>
+                <UpgradeBtn onClick={goToCheckout}>Upgrade to premium!</UpgradeBtn>
                 ):(
                     <h2>You{`'`}re a Premium customer!</h2>
                 )
