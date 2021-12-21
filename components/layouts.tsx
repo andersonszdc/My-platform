@@ -1,45 +1,30 @@
 import React from 'react';
-import Image from 'next/image';
 import styled from 'styled-components';
-import cover from '../assets/home-cover.png';
 import NavBar from './NavBar';
 
 const WrapperLogin = styled.div`
     display: flex;
     justify-content: center;
-    border-radius: 16px;
     overflow: hidden;
-
-    .home__image {
-        height: 90vh;
-        width: calc(813/673*90vh);
-    }
-
-    .home__actions {
-        width: 500px;
-        background: #FFF;
-    }
-`
-
-const ContainerLogin = styled.div`
-    display: flex;
-    justify-content: center;
     height: 100vh;
     align-items: center;
+    
+    .home__actions {
+        border-radius: 16px;
+        width: 500px;
+        background: #FFF;
+        height: max-content;
+        padding: 1rem;
+    }
 `
 
 export const LayoutLogin: React.FC = ({children}) => {
     return (
-        <ContainerLogin>  
             <WrapperLogin>
                 <div className="home__actions">
                     { children }
                 </div>
-                <div className="home__image">
-                    <Image alt="" priority layout="responsive" src={cover} />
-                </div>
             </WrapperLogin>
-        </ContainerLogin>
     );
 }
 
