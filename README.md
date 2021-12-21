@@ -1,21 +1,20 @@
 <h1 align="center">My-platform</h1>
-<h3 align="center">🚧 Projeto em construção... 🚧</h3>
+<!-- <h3 align="center">🚧 Projeto em construção... 🚧</h3> -->
 
-<p align="center">Esse projeto é uma plataforma de cursos com seção para membros free e premium.</p>
+<p align="center">Esse projeto é uma plataforma de infoprodutos com seção para membros free e premium.</p>
 
 ---
 
 <h1 align="center">
-  <img alt="MyDelivery" title="MyDelivery" src="./github/cover-site.png" height="300" />
+  <img alt="MyPlatform" title="MyPlatform" src="./github/cover-app.png" height="300" />
 </h1>
 
-<a href="https://andersonszdc.com">Ver o projeto no ar (em breve)</a>
+<a href="https://my-platform-henna.vercel.app/">Ver o projeto no ar</a>
 
 ### Features
 - [x] Sincronização entre o Firebase e o Stripe (webhook)
 - [x] Login social
 - [x] Login em cache
-- [x] Totalmente responsivo
 - [x] Checkout online
 
 ### Pré-requisitos
@@ -63,9 +62,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### Autor
 
-<img alt="andersonszdc" title="andersonszdc" src="https://avatars.githubusercontent.com/u/86430252?v=4" height="100" width="100" />
+<img style="border-radius: 20px" alt="andersonszdc" title="andersonszdc" src="https://avatars.githubusercontent.com/u/86430252?v=4" height="75" width="75" />
 
 Made with 💜 by andersonszdc
 
-<a href="https://www.linkedin.com/in/anderson-souza-b28431198/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/andersonszdc/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 <a href="https://www.instagram.com/andersonszdc" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
