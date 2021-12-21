@@ -4,7 +4,6 @@ import React from 'react';
 import styled from 'styled-components';
 import House from '../assets/House';
 import Logout from '../assets/Logout';
-import Setting from '../assets/Setting';
 
 const Wrapper = styled.div`
     display: flex;
@@ -16,8 +15,13 @@ const Wrapper = styled.div`
     border-radius: 16px;
 `
 
+const Icon = styled.div`
+    cursor: pointer;
+`
+
 const NavBar: React.FC = () => {
     const router = useRouter()
+
     const SignOut = () => {
         signOut(getAuth())
         .then(() => {
@@ -26,13 +30,15 @@ const NavBar: React.FC = () => {
             console.log(error)
         })
     }
+
     return (
         <Wrapper>
-            <House />
-            <Setting />
-            <div onClick={SignOut}>
+            <Icon>
+                <House />
+            </Icon>
+            <Icon onClick={SignOut}>
                 <Logout />
-            </div>
+            </Icon>
         </Wrapper>
     );
 }
