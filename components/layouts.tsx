@@ -14,7 +14,7 @@ const WrapperLogin = styled.div`
         width: 500px;
         background: #FFF;
         height: max-content;
-        padding: 1rem;
+        padding: 3rem;
     }
 `
 

@@ -11,7 +11,6 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 56px;
 
     .form {
         display: flex;
@@ -137,7 +136,7 @@ const SignUp = () => {
                     </div>
                     <button className="form__send">Criar</button>
                 </div>
-                <div>{message}</div>
+                {message && <div>{message}</div>}
             </form>
         </Wrapper>
     );
