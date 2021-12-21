@@ -47,6 +47,7 @@ import Document, { DocumentContext, DocumentInitialProps, Html,
           </Head>
           <body>
             <Main />
+            <div id="statusMessage" />
             <NextScript />
           </body>
         </Html>
