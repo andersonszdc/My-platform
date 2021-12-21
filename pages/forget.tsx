@@ -1,7 +1,6 @@
 import { getAuth, sendPasswordResetEmail } from '@firebase/auth';
 import React, { useState } from 'react';
 import firebaseApp from '../firebase/firebaseClient';
-import { useRouter } from 'next/router';
 import { LayoutLogin } from '../components/layouts';
 import styled from 'styled-components';
 import Link from 'next/link';
@@ -62,7 +61,6 @@ const Wrapper = styled.div`
 const Forget = () => {
 
   firebaseApp
-  const route = useRouter()
   const auth = getAuth()
   const [email, setEmail] = useState('')
   const [isSend, setIsSend] = useState(false)

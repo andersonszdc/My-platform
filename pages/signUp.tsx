@@ -6,6 +6,7 @@ import firebaseApp, { db } from '../firebase/firebaseClient';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import Portal from '../HOC/Portal';
 
 const Wrapper = styled.div`
     display: flex;
@@ -80,6 +81,16 @@ const Wrapper = styled.div`
     }
 `
 
+const StatusMessage = styled.div`
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+`
+
 const SignUp = () => {
 
     firebaseApp
@@ -136,8 +147,12 @@ const SignUp = () => {
                     </div>
                     <button className="form__send">Criar</button>
                 </div>
-                {message && <div>{message}</div>}
             </form>
+            {message && (
+                <Portal>
+                    <StatusMessage>{message}</StatusMessage>
+                </Portal>
+            )}
         </Wrapper>
     );
 }
