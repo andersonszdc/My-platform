@@ -5,7 +5,6 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { LayoutNavBar } from '../components/layouts';
 import createSubscription from '../stripe/createSubscription';
 import usePremiumStatus from '../stripe/usePremiumStatus';
-import Modules from '../components/Modules';
 import HeaderPlatform from '../components/HeaderPlatform';
 
 const Platform = () => {
@@ -40,10 +39,9 @@ const Platform = () => {
             {!userIsPremium? (
                 <button onClick={goToCheckout}>Upgrade to premium!</button>
                 ):(
-                    <h2>Have a cookie Premium customer!</h2>
+                    <h2>You{`'`}re a Premium customer!</h2>
                 )
             }
-            <Modules />
         </div>
     );
 }
