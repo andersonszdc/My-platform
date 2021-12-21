@@ -4,11 +4,13 @@ import { signInWithPopup, getAuth, GoogleAuthProvider, signInWithEmailAndPasswor
 import { doc, setDoc } from 'firebase/firestore'
 import Link from 'next/link'
 import styled from 'styled-components';
+import Portal from '../HOC/Portal';
 
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 2rem;
 
     .form {
         display: flex;
@@ -78,6 +80,16 @@ const Wrapper = styled.div`
     }
 `
 
+const StatusMessage = styled.div`
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+`
+
 const Login = () => {
 
     const [userData, setUserData] = useState({
@@ -140,7 +152,6 @@ const Login = () => {
                     </div>
                     <button className="form__send">Entrar</button>
                 </div>
-                <div>{message}</div>
             </form>
             <div className="social">
                 <span className="social__label">Login com</span>
@@ -149,6 +160,11 @@ const Login = () => {
                     <button onClick={signInWithGoogle}>Google</button>
                 </div>
             </div>
+            {message && (
+                <Portal>
+                    <StatusMessage>{message}</StatusMessage>
+                </Portal>
+            )}
         </Wrapper>
     );
 }
