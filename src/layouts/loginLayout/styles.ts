@@ -9,8 +9,9 @@ export const WrapperLogin = styled.div`
 
   .home__actions {
     border-radius: 16px;
-    width: 500px;
-    background: #fff;
+    width: 600px;
+    background: #000019;
+    color: #efedee;
     height: max-content;
     padding: 3rem;
   }

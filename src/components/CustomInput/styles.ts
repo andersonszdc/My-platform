@@ -21,5 +21,6 @@ export const StyledInput = styled.div`
     width: 100%;
     border: none;
     outline: none;
+    background-color: transparent;
   }
 `;

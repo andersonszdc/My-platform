@@ -11,6 +11,7 @@ export default createGlobalStyle`
         font-family: inherit;
         font-size: inherit;
         font-weight: inherit;
+        color: inherit;
     }
 
     a {
@@ -21,6 +22,6 @@ export default createGlobalStyle`
 
     body {
         font-family: 'Poppins';
-        background: #F29FBE;
+        background: #EFEDEE;
     }
 `;

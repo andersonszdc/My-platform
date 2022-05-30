@@ -62,23 +62,6 @@ const Login = () => {
     <Wrapper>
       <form className="form" onSubmit={signInWithEmail}>
         <h1 className="form__label">Login</h1>
-        <input
-          className="form__input"
-          type="text"
-          name="email"
-          onChange={handleChange}
-          value={userData.email}
-          placeholder="e-mail"
-        />
-        <input
-          className="form__input"
-          type="password"
-          autoComplete="current-password"
-          name="password"
-          onChange={handleChange}
-          value={userData.password}
-          placeholder="senha"
-        />
         <CustomInput
           type="email"
           callback={handleChange}
