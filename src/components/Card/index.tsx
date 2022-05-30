@@ -1,5 +1,5 @@
 import React from "react";
-import Arrow from "../../assets/Arrow";
+import Arrow from "../../../assets/Arrow";
 import { Wrapper, WrapperProgress } from "./styles";
 
 const Card: React.FC = () => {

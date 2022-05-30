@@ -1,8 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { getAuth, signOut } from "@firebase/auth";
-import House from "../../assets/House";
-import Logout from "../../assets/Logout";
+import House from "../../../assets/House";
+import Logout from "../../../assets/Logout";
 import { Icon, Wrapper } from "./styles";
 
 const NavBar: React.FC = () => {
