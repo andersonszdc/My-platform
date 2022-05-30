@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import profile from "../assets/profile.png";
 import { Wrapper } from "./styles";
 
 const HeaderPlatform = ({ user }: any) => {
@@ -12,7 +11,7 @@ const HeaderPlatform = ({ user }: any) => {
           className="perfil__img"
           width="75"
           height="75"
-          src={user.photoURL || profile}
+          src={user.photoURL || "/images/profile.png"}
           alt=""
         />
         <h1 className="perfil__name">{user.displayName}</h1>

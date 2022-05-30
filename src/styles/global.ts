@@ -14,6 +14,10 @@ export default createGlobalStyle`
         color: inherit;
     }
 
+    button {
+        font-family: inherit;
+    }
+
     a {
         color: inherit;
         text-decoration: none;

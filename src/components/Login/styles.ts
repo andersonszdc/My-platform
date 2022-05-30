@@ -39,8 +39,7 @@ export const Wrapper = styled.div`
     padding: 12px 24px;
     border-radius: 8px;
     border: none;
-    font-family: "Poppins";
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
   }
@@ -57,7 +56,7 @@ export const Wrapper = styled.div`
 
   .social__provider button {
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     border: none;
     background: none;
