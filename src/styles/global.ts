@@ -7,6 +7,12 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
 
+    input {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+    }
+
     a {
         color: inherit;
         text-decoration: none;
@@ -17,4 +23,4 @@ export default createGlobalStyle`
         font-family: 'Poppins';
         background: #F29FBE;
     }
-`
+`;

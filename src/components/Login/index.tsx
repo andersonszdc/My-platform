@@ -10,6 +10,7 @@ import { doc, setDoc } from "firebase/firestore";
 import Link from "next/link";
 import Portal from "../../HOC/Portal";
 import { StatusMessage, Wrapper } from "./styles";
+import CustomInput from "../CustomInput";
 
 const Login = () => {
   const [userData, setUserData] = useState({
@@ -60,7 +61,7 @@ const Login = () => {
   return (
     <Wrapper>
       <form className="form" onSubmit={signInWithEmail}>
-        <label className="form__label">Login</label>
+        <h1 className="form__label">Login</h1>
         <input
           className="form__input"
           type="text"
@@ -77,6 +78,16 @@ const Login = () => {
           onChange={handleChange}
           value={userData.password}
           placeholder="senha"
+        />
+        <CustomInput
+          type="email"
+          callback={handleChange}
+          value={userData.email}
+        />
+        <CustomInput
+          type="password"
+          callback={handleChange}
+          value={userData.password}
         />
         <div className="form__actions">
           <div className="form__utilities">
