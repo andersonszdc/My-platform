@@ -84,8 +84,8 @@ const Login = () => {
       <div className="social">
         <span className="social__label">Login com</span>
         <div className="social__provider">
-          <button onClick={signInWithGoogle}>Facebook</button>
-          <button onClick={signInWithGoogle}>Google</button>
+          <CustomButton type="2" onClick={signInWithGoogle}>Facebook</CustomButton>
+          <CustomButton type="2" onClick={signInWithGoogle}>Google</CustomButton>
         </div>
       </div>
       {message && (

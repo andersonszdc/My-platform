@@ -13,3 +13,15 @@ export const StyledCustomButton = styled.button`
     background-color: #efedee;
   }
 `;
+
+export const StyledCustomButton2 = styled.button`
+  font-size: 14px;
+  font-weight: 600;
+  color: #00e3e3;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.125s ease-in;
+  :hover {
+    color: #efedee;
+  }
+`;
