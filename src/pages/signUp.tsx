@@ -11,6 +11,9 @@ import Link from "next/link";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import Portal from "../HOC/Portal";
+import CustomInput from "../components/CustomInput";
+import CustomButton from "../components/CustomButton";
+import CustomLink from "../components/CustomLink";
 
 const Wrapper = styled.div`
   display: flex;
@@ -145,35 +148,26 @@ const SignUp = () => {
     <Wrapper>
       <form className="form" onSubmit={createWithEmail}>
         <label className="form__label">Criar conta</label>
-        <input
-          className="form__input"
-          type="text"
-          onChange={handleChange}
-          name="nome"
+        <CustomInput
+          callback={handleChange}
           value={userData.nome}
-          placeholder="nome"
+          type="email"
         />
-        <input
-          className="form__input"
-          type="text"
-          onChange={handleChange}
-          name="email"
+        <CustomInput
+          callback={handleChange}
           value={userData.email}
-          placeholder="e-mail"
+          type="email"
         />
-        <input
-          className="form__input"
-          type="password"
-          onChange={handleChange}
-          name="password"
+        <CustomInput
+          callback={handleChange}
           value={userData.password}
-          placeholder="password"
+          type="email"
         />
         <div className="form__actions">
           <div className="form__utilities">
-            <Link href="/">Voltar para o login</Link>
+            <CustomLink href="/">Voltar para o login</CustomLink>
           </div>
-          <button className="form__send">Criar</button>
+          <CustomButton>Criar</CustomButton>
         </div>
       </form>
       {message && (

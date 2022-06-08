@@ -4,6 +4,9 @@ import firebaseApp from "../firebase/firebaseClient";
 import { LayoutLogin } from "../layouts/loginLayout";
 import styled from "styled-components";
 import Link from "next/link";
+import CustomButton from "../components/CustomButton";
+import CustomLink from "../components/CustomLink";
+import CustomInput from "../components/CustomInput";
 
 const Wrapper = styled.div`
   display: flex;
@@ -85,19 +88,12 @@ const Forget = () => {
         {!isSend && (
           <>
             <label className="form__label">Redefinir a senha</label>
-            <input
-              className="form__input"
-              type="text"
-              name="email"
-              onChange={handleEmail}
-              value={email}
-              placeholder="e-mail"
-            />
+            <CustomInput callback={handleEmail} value={email} type="email" />
             <div className="form__actions">
               <div className="form__utilities">
-                <Link href="/">Voltar para o login</Link>
+                <CustomLink href="/">Voltar para o login</CustomLink>
               </div>
-              <button className="form__send">Enviar o e-mail</button>
+              <CustomButton>Enviar o e-mail</CustomButton>
             </div>
           </>
         )}
