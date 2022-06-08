@@ -88,7 +88,13 @@ const Forget = () => {
         {!isSend && (
           <>
             <label className="form__label">Redefinir a senha</label>
-            <CustomInput callback={handleEmail} value={email} type="email" />
+            <CustomInput
+              label="E-mail"
+              onChange={handleEmail}
+              value={email}
+              type="email"
+              icon="message"
+            />
             <div className="form__actions">
               <div className="form__utilities">
                 <CustomLink href="/">Voltar para o login</CustomLink>

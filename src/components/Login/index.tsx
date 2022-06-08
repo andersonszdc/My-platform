@@ -64,14 +64,22 @@ const Login = () => {
       <form className="form" onSubmit={signInWithEmail}>
         <h1 className="form__label">Login</h1>
         <CustomInput
+          label="E-mail"
+          name="email"
           type="email"
-          callback={handleChange}
+          onChange={handleChange}
           value={userData.email}
+          icon="message"
+          placeholder="anderson@mail.com"
         />
         <CustomInput
+          label="Password"
+          name="password"
           type="password"
-          callback={handleChange}
+          onChange={handleChange}
           value={userData.password}
+          icon="message"
+          placeholder="********"
         />
         <div className="form__actions">
           <div className="form__utilities">
@@ -84,8 +92,12 @@ const Login = () => {
       <div className="social">
         <span className="social__label">Login com</span>
         <div className="social__provider">
-          <CustomButton type="2" onClick={signInWithGoogle}>Facebook</CustomButton>
-          <CustomButton type="2" onClick={signInWithGoogle}>Google</CustomButton>
+          <CustomButton type="2" onClick={signInWithGoogle}>
+            Facebook
+          </CustomButton>
+          <CustomButton type="2" onClick={signInWithGoogle}>
+            Google
+          </CustomButton>
         </div>
       </div>
       {message && (

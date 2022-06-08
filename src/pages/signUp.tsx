@@ -7,7 +7,6 @@ import { doc, setDoc } from "@firebase/firestore";
 import React, { useState } from "react";
 import { LayoutLogin } from "../layouts/loginLayout";
 import firebaseApp, { db } from "../firebase/firebaseClient";
-import Link from "next/link";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import Portal from "../HOC/Portal";
@@ -149,19 +148,31 @@ const SignUp = () => {
       <form className="form" onSubmit={createWithEmail}>
         <label className="form__label">Criar conta</label>
         <CustomInput
-          callback={handleChange}
+          label="Name"
+          name="nome"
+          onChange={handleChange}
           value={userData.nome}
           type="email"
+          placeholder="anderson"
+          icon="message"
         />
         <CustomInput
-          callback={handleChange}
+          label="Email"
+          name="email"
+          onChange={handleChange}
           value={userData.email}
           type="email"
+          placeholder="anderson@mail.com"
+          icon="message"
         />
         <CustomInput
-          callback={handleChange}
+          label="Password"
+          name="password"
+          onChange={handleChange}
           value={userData.password}
-          type="email"
+          type="password"
+          placeholder="*******"
+          icon="message"
         />
         <div className="form__actions">
           <div className="form__utilities">
