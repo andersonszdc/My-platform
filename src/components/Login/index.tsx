@@ -7,11 +7,11 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
-import Link from "next/link";
 import Portal from "../../HOC/Portal";
 import { StatusMessage, Wrapper } from "./styles";
 import CustomInput from "../CustomInput";
 import CustomButton from "../CustomButton";
+import CustomLink from "../CustomLink";
 
 const Login = () => {
   const [userData, setUserData] = useState({
@@ -75,8 +75,8 @@ const Login = () => {
         />
         <div className="form__actions">
           <div className="form__utilities">
-            <Link href="/signUp">Criar conta</Link>
-            <Link href="/forget">Esqueci a senha</Link>
+            <CustomLink href="/signUp">Criar conta</CustomLink>
+            <CustomLink href="/forget">Esqueci a senha</CustomLink>
           </div>
           <CustomButton>Entrar</CustomButton>
         </div>
