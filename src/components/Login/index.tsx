@@ -11,6 +11,7 @@ import Link from "next/link";
 import Portal from "../../HOC/Portal";
 import { StatusMessage, Wrapper } from "./styles";
 import CustomInput from "../CustomInput";
+import CustomButton from "../CustomButton";
 
 const Login = () => {
   const [userData, setUserData] = useState({
@@ -77,7 +78,7 @@ const Login = () => {
             <Link href="/signUp">Criar conta</Link>
             <Link href="/forget">Esqueci a senha</Link>
           </div>
-          <button className="form__send">Entrar</button>
+          <CustomButton>Entrar</CustomButton>
         </div>
       </form>
       <div className="social">

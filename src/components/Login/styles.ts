@@ -33,17 +33,6 @@ export const Wrapper = styled.div`
     color: #00e3e3;
   }
 
-  .form__send {
-    background-color: #00e3e3;
-    color: #000019;
-    padding: 12px 24px;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-  }
-
   .social {
     display: flex;
     justify-content: space-between;
