@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import firebaseApp, { db } from "../../firebase/firebaseClient";
 import {
   signInWithPopup,
@@ -12,6 +12,7 @@ import { StatusMessage, Wrapper } from "./styles";
 import CustomInput from "../CustomInput";
 import CustomButton from "../CustomButton";
 import CustomLink from "../CustomLink";
+import MessageModal from "../MessageModal";
 
 const Login = () => {
   const [userData, setUserData] = useState({
@@ -59,6 +60,14 @@ const Login = () => {
     }));
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMessage("");
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [message]);
+
   return (
     <Wrapper>
       <form className="form" onSubmit={signInWithEmail}>
@@ -102,7 +111,7 @@ const Login = () => {
       </div>
       {message && (
         <Portal>
-          <StatusMessage>{message}</StatusMessage>
+          <MessageModal setMessage={setMessage} message={message} />
         </Portal>
       )}
     </Wrapper>
