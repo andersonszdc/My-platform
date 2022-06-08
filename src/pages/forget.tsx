@@ -94,6 +94,7 @@ const Forget = () => {
               value={email}
               type="email"
               icon="message"
+              placeholder="anderson@mail.com"
             />
             <div className="form__actions">
               <div className="form__utilities">

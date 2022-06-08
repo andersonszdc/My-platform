@@ -78,7 +78,7 @@ const Login = () => {
           type="password"
           onChange={handleChange}
           value={userData.password}
-          icon="message"
+          icon="lock"
           placeholder="********"
         />
         <div className="form__actions">

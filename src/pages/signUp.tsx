@@ -152,9 +152,9 @@ const SignUp = () => {
           name="nome"
           onChange={handleChange}
           value={userData.nome}
-          type="email"
+          type="text"
           placeholder="anderson"
-          icon="message"
+          icon="account"
         />
         <CustomInput
           label="Email"
@@ -172,7 +172,7 @@ const SignUp = () => {
           value={userData.password}
           type="password"
           placeholder="*******"
-          icon="message"
+          icon="lock"
         />
         <div className="form__actions">
           <div className="form__utilities">

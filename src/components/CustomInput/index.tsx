@@ -4,7 +4,7 @@ import { StyledInput } from "./styles";
 
 interface CustomInputProps extends React.HTMLProps<HTMLInputElement> {
   customType?: "password" | "email";
-  icon?: "message";
+  icon?: "message" | "lock" | "account";
   label: string;
 }
 
