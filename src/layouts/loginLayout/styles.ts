@@ -8,7 +8,7 @@ export const WrapperLogin = styled.div`
   align-items: center;
 
   .home__actions {
-    border-radius: 16px;
+    border-radius: 8px;
     width: 600px;
     background: #000019;
     color: #efedee;
