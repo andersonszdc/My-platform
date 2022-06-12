@@ -9,8 +9,8 @@ import HeaderPlatform from "../components/HeaderPlatform";
 import styled from "styled-components";
 
 const UpgradeBtn = styled.button`
-  background-color: #f72585;
-  color: #fff;
+  background-color: ${({ theme }) => theme.pink};
+  color: ${({ theme }) => theme.white};
   padding: 12px 24px;
   border-radius: 16px;
   border: none;
