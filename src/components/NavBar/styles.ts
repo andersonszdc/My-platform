@@ -30,19 +30,10 @@ export const StyledTab = styled.div<StyledTabProps>`
   border-radius: 0px 16px 16px 0px;
   background-color: ${({ active, theme }) =>
     active ? theme.purple : "transparent"};
-  cursor: pointer;
-  transition: 0.125s ease-in;
+  cursor: ${({ active }) => (active ? "default" : "pointer")};
+  transition: 0.15s ease-in;
   :hover {
-    background-color: ${({ active, theme }) =>
-      active ? theme.blue : theme.grayLight};
-
-    p {
-      color: ${({ active, theme }) => (active ? theme.white : theme.black)};
-    }
-
-    path {
-      fill: ${({ active, theme }) => (active ? theme.white : theme.black)};
-    }
+    background-color: ${({ active, theme }) => !active && theme.purple15};
   }
 
   svg {
@@ -51,12 +42,10 @@ export const StyledTab = styled.div<StyledTabProps>`
   }
 
   path {
-    transition: 0.125s ease-in;
     fill: ${({ active, theme }) => (active ? theme.blue : theme.black)};
   }
 
   p {
-    transition: 0.125s ease-in;
     color: ${({ active, theme }) => (active ? theme.blue : theme.black)};
     font-size: 16px;
     font-weight: 500;

@@ -6,8 +6,9 @@ const theme = {
   blue: "hsl(180, 100%, 45%)",
   pink: "hsl(330, 100%, 64%)",
   purple: "hsl(260, 71%, 15%)",
+  purple15: "hsla(260, 71%, 15%, 0.15)",
   grayDark: "hsl(331, 3%, 26%)",
-  grayLight: "hsl(0, 0%, 88%)"
+  grayLight: "hsl(0, 0%, 88%)",
 };
 
 export default theme;
