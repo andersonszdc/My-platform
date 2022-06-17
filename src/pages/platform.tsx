@@ -42,13 +42,13 @@ const Platform = () => {
     user && (
       <div>
         <HeaderPlatform user={user} />
-        {!userIsPremium ? (
+        {/* {!userIsPremium ? (
           <CustomButton onClick={goToCheckout}>
             Upgrade to Premium!
           </CustomButton>
         ) : (
           <h2>You{`'`}re a Premium customer!</h2>
-        )}
+        )} */}
         <MainCard />
         <Classes />
       </div>

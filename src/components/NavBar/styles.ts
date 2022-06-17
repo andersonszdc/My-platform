@@ -43,8 +43,8 @@ export const StyledTab = styled.div<StyledTabProps>`
   }
 
   svg {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
   }
 
   path {
@@ -53,7 +53,7 @@ export const StyledTab = styled.div<StyledTabProps>`
 
   p {
     color: ${({ active, theme }) => (active ? theme.blue : theme.black)};
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 400;
   }
 `;
