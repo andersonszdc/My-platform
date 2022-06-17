@@ -7,5 +7,6 @@ export const WrapperNavBar = styled.div`
   .content {
     width: 100%;
     overflow: hidden;
+    padding: 40px;
   }
 `;
