@@ -1,11 +1,12 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { getAuth, signOut } from "@firebase/auth";
-import House from "../../../assets/House";
-import Logout from "../../../assets/Logout";
 import { Icon, StyledNavBar, StyledTab } from "./styles";
 import theme from "../../styles/colors";
 import CardUpgrade from "../CardUpgrade";
+import House from "../../assets/Icons/House";
+import Logout from "../../assets/Icons/Logout";
+import { IconProps } from "../../assets/Icons/types";
 
 const NavBar: React.FC = () => {
   const router = useRouter();
@@ -35,7 +36,7 @@ const NavBar: React.FC = () => {
 export default NavBar;
 
 type TabProps = {
-  Icon?: React.FC;
+  Icon?: ({ fill }: IconProps) => JSX.Element;
   active?: boolean;
   label: string;
 };
