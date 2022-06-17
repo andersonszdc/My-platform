@@ -6,9 +6,8 @@ import { LayoutNavBar } from "../layouts/NavBarLayout";
 import createSubscription from "../stripe/createSubscription";
 import usePremiumStatus from "../stripe/usePremiumStatus";
 import HeaderPlatform from "../components/HeaderPlatform";
-import styled from "styled-components";
 import CustomButton from "../components/CustomButton";
-import MainCard from "../components/MainCard";
+import MainBanner from "../components/MainBanner";
 import Classes from "../sections/Classes";
 
 const Platform = () => {
@@ -49,7 +48,7 @@ const Platform = () => {
         ) : (
           <h2>You{`'`}re a Premium customer!</h2>
         )} */}
-        <MainCard />
+        <MainBanner />
         <Classes />
       </div>
     )

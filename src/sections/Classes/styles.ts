@@ -7,7 +7,8 @@ export const StyledClasses = styled.section`
     margin: 40px 0;
   }
   .cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
 `;

@@ -9,6 +9,8 @@ const Classes: React.FC = () => {
       <div className="cards">
         <Card />
         <Card />
+        <Card />
+        <Card />
       </div>
     </StyledClasses>
   );

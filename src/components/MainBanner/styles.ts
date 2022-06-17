@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMainCard = styled.section`
+export const StyledMainBanner = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
