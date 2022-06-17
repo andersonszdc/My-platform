@@ -9,6 +9,7 @@ import HeaderPlatform from "../components/HeaderPlatform";
 import styled from "styled-components";
 import CustomButton from "../components/CustomButton";
 import MainCard from "../components/MainCard";
+import Classes from "../sections/Classes";
 
 const Platform = () => {
   const router = useRouter();
@@ -49,6 +50,7 @@ const Platform = () => {
           <h2>You{`'`}re a Premium customer!</h2>
         )}
         <MainCard />
+        <Classes />
       </div>
     )
   );
