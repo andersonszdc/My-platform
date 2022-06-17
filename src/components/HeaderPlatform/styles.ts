@@ -4,25 +4,21 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 32px 24px 0;
-
-    .header__morning {
-        font-size: 24px;
-        font-weight: 600;
-    }
+    padding: 0 32px 24px 0;
 
     .perfil__name {
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 16px;
+        font-weight: 400;
     }
 
     .header__perfil {
         display: flex;
-        gap: 1rem;
+        gap: 16px;
         align-items: center;
     }
+
     .perfil__img {
-        border-radius: 1rem;
+        border-radius: 50%;
         background-color: white;
     }
 `

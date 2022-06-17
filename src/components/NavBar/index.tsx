@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { getAuth, signOut } from "@firebase/auth";
 import House from "../../../assets/House";
 import Logout from "../../../assets/Logout";
-import { Icon, StyledTab, Wrapper } from "./styles";
+import { Icon, StyledNavBar, StyledTab } from "./styles";
 import theme from "../../styles/colors";
 import CardUpgrade from "../CardUpgrade";
 
@@ -21,14 +21,14 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <Wrapper>
-      <h1>My-Platform</h1>
+    <StyledNavBar>
+      <h1 className="logo">My-Platform</h1>
       <div className="tabs">
         <Tab label="Home" Icon={House} active />
         <Tab label="Logout" Icon={Logout} />
       </div>
       <CardUpgrade />
-    </Wrapper>
+    </StyledNavBar>
   );
 };
 

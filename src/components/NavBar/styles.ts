@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const StyledNavBar = styled.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   flex-direction: column;
   height: 100%;
   padding: 40px 0;
   border-radius: 16px;
+
+  .logo {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
 
   .tabs {
     margin-top: 80px;
