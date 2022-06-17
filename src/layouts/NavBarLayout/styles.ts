@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-export const WrapperNavBar = styled.div`
+export const StyledLayoutNavBar = styled.div`
   display: flex;
   gap: 32px;
-  height: calc(100vh);
-  .content {
+  height: 100vh;
+  overflow-y: hidden;
+
+  .main-section {
     width: 100%;
     padding: 40px;
+    overflow-y: scroll;
+    border-left: 1px solid ${({ theme }) => theme.purple};
   }
 `;

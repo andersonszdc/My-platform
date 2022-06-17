@@ -1,12 +1,12 @@
 import React from "react";
 import NavBar from "../../components/NavBar/index";
-import { WrapperNavBar } from "./styles";
+import { StyledLayoutNavBar } from "./styles";
 
 export const LayoutNavBar: React.FC = ({ children }) => {
   return (
-    <WrapperNavBar>
+    <StyledLayoutNavBar>
       <NavBar />
-      <div className="content">{children}</div>
-    </WrapperNavBar>
+      <div className="main-section">{children}</div>
+    </StyledLayoutNavBar>
   );
 };
