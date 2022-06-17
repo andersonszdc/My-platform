@@ -5,6 +5,7 @@ export const StyledLessonsGuide = styled.section`
   flex-direction: column;
   gap: 16px;
   padding: 24px;
+  border-radius: 16px;
   background-color: ${({ theme }) => theme.grayLight};
 
   .title {

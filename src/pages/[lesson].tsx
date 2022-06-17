@@ -2,24 +2,27 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import LessonsGuide from "../components/LessonsGuide";
 import { LayoutNavBar } from "../layouts/NavBarLayout";
+import { StyledLessonPage } from "../styles/pages/lessonPage";
 
 const LessonPage = ({ message, lesson }) => {
   return (
-    <div>
-      <h1>Como escolher a tipografia</h1>
-      <h2>Fundamentos do Design</h2>
-      <div className="screen"></div>
-      <div className="tabs">
-        <div>Notes</div>
-        <div>Resources</div>
+    <StyledLessonPage>
+      <div>
+        <h1 className="title">Como escolher a tipografia</h1>
+        <h2 className="subtitle">Fundamentos do Design</h2>
+        <div className="screen"></div>
+        <div className="tabs">
+          <div>Notes</div>
+          <div>Resources</div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien est
+          adipiscing arcu, cursus. Sit quam eu augue tempor aenean nunc ipsum
+          pharetra, amet.
+        </p>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien est
-        adipiscing arcu, cursus. Sit quam eu augue tempor aenean nunc ipsum
-        pharetra, amet.
-      </p>
       <LessonsGuide />
-    </div>
+    </StyledLessonPage>
   );
 };
 
