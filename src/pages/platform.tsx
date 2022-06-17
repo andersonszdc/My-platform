@@ -7,18 +7,7 @@ import createSubscription from "../stripe/createSubscription";
 import usePremiumStatus from "../stripe/usePremiumStatus";
 import HeaderPlatform from "../components/HeaderPlatform";
 import styled from "styled-components";
-
-const UpgradeBtn = styled.button`
-  background-color: ${({ theme }) => theme.pink};
-  color: ${({ theme }) => theme.white};
-  padding: 12px 24px;
-  border-radius: 16px;
-  border: none;
-  font-family: "Poppins";
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-`;
+import CustomButton from "../components/CustomButton";
 
 const Platform = () => {
   const router = useRouter();
@@ -52,7 +41,9 @@ const Platform = () => {
       <div>
         <HeaderPlatform user={user} />
         {!userIsPremium ? (
-          <UpgradeBtn onClick={goToCheckout}>Upgrade to premium!</UpgradeBtn>
+          <CustomButton onClick={goToCheckout}>
+            Upgrade to Premium!
+          </CustomButton>
         ) : (
           <h2>You{`'`}re a Premium customer!</h2>
         )}

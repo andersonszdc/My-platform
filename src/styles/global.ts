@@ -16,6 +16,7 @@ export default createGlobalStyle`
 
     button {
         font-family: inherit;
+        border: none;
     }
 
     a {
