@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Approve from "../../assets/Icons/Approve";
-import Lock from "../../assets/Icons/lock";
+import Lock from "../../assets/Icons/Lock";
 import RightArrow from "../../assets/Icons/RightArrow";
 import theme from "../../styles/colors";
 import { StyledLessonsGuide, StyledLessonTab } from "./styles";

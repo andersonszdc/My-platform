@@ -25,6 +25,7 @@ export const Icon = styled.div`
 
 type StyledTabProps = {
   active?: boolean;
+  shrink?: boolean;
 };
 
 export const StyledTab = styled.div<StyledTabProps>`
@@ -32,7 +33,7 @@ export const StyledTab = styled.div<StyledTabProps>`
   gap: 16px;
   align-items: center;
   width: 100%;
-  padding: 12px 40px 12px 40px;
+  padding: 12px ${({ shrink }) => (shrink ? "20px" : "40px")} 12px 40px;
   border-radius: 0px 16px 16px 0px;
   background-color: ${({ active, theme }) =>
     active ? theme.purple : "transparent"};

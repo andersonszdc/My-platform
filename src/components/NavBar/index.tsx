@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { getAuth, signOut } from "@firebase/auth";
 import { Icon, StyledNavBar, StyledTab } from "./styles";
@@ -8,8 +8,9 @@ import House from "../../assets/Icons/House";
 import Logout from "../../assets/Icons/Logout";
 import { IconProps } from "../../assets/Icons/types";
 
-const NavBar: React.FC = () => {
+const NavBar = () => {
   const router = useRouter();
+  const [shrink, setShrink] = useState(true);
 
   const SignOut = () => {
     signOut(getAuth())
@@ -23,12 +24,12 @@ const NavBar: React.FC = () => {
 
   return (
     <StyledNavBar>
-      <h1 className="logo">My-Platform</h1>
+      <h1 className="logo">{shrink ? "M" : "My-Platform"}</h1>
       <div className="tabs">
-        <Tab label="Home" Icon={House} active />
-        <Tab label="Logout" Icon={Logout} />
+        <Tab shrink={shrink} label="Home" Icon={House} active />
+        <Tab shrink={shrink} label="Logout" Icon={Logout} />
       </div>
-      <CardUpgrade />
+      {!shrink && <CardUpgrade />}
     </StyledNavBar>
   );
 };
@@ -39,13 +40,14 @@ type TabProps = {
   Icon?: ({ fill }: IconProps) => JSX.Element;
   active?: boolean;
   label: string;
+  shrink: boolean;
 };
 
-const Tab = ({ Icon, active, label }: TabProps) => {
+const Tab = ({ Icon, active, label, shrink }: TabProps) => {
   return (
-    <StyledTab active={active}>
+    <StyledTab shrink={shrink} active={active}>
       {Icon && <Icon />}
-      <p>{label}</p>
+      {!shrink && <p>{label}</p>}
     </StyledTab>
   );
 };
