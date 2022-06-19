@@ -5,6 +5,10 @@ export const StyledLayoutNavBar = styled.div`
   height: 100vh;
   overflow-y: hidden;
 
+  .navbar {
+    width: 104px;
+  }
+
   .main-section {
     width: 100%;
     padding: 40px;

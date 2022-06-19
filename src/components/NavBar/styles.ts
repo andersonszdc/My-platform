@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "../../styles/colors";
 
 type StyledNavBarProps = {
   shrink: boolean;
@@ -6,6 +7,10 @@ type StyledNavBarProps = {
 
 export const StyledNavBar = styled.div<StyledNavBarProps>`
   display: grid;
+  z-index: 1;
+  position: relative;
+  width: fit-content;
+  background-color: ${({ theme }) => theme.white};
   grid-template-rows: auto 1fr auto;
   flex-direction: column;
   height: 100%;

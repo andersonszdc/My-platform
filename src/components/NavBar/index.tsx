@@ -22,7 +22,11 @@ const NavBar = () => {
   };
 
   return (
-    <StyledNavBar shrink={shrink}>
+    <StyledNavBar
+      onMouseEnter={() => setShrink(false)}
+      onMouseLeave={() => setShrink(true)}
+      shrink={shrink}
+    >
       <h1 className="logo">{shrink ? "M" : "My-Platform"}</h1>
       <div className="tabs">
         <Tab shrink={shrink} label="Home" Icon={House} active />
