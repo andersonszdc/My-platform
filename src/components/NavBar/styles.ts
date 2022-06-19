@@ -21,6 +21,7 @@ export const StyledNavBar = styled.div<StyledNavBarProps>`
     font-size: 24px;
     font-weight: 600;
     text-align: center;
+    cursor: pointer;
   }
 
   .tabs {

@@ -27,7 +27,9 @@ const NavBar = () => {
       onMouseLeave={() => setShrink(true)}
       shrink={shrink}
     >
-      <h1 className="logo">{shrink ? "M" : "My-Platform"}</h1>
+      <h1 className="logo" onClick={() => router.push("/platform")}>
+        {shrink ? "M" : "My-Platform"}
+      </h1>
       <div className="tabs">
         <Tab shrink={shrink} label="Home" Icon={House} active />
         <Tab shrink={shrink} label="Logout" Icon={Logout} onClick={SignOut} />
