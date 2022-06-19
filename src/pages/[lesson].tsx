@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
+import InfoTabs from "../components/InfoTabs";
 import LessonsGuide from "../components/LessonsGuide";
 import { LayoutNavBar } from "../layouts/NavBarLayout";
 import { StyledLessonPage } from "../styles/pages/lessonPage";
@@ -7,20 +8,12 @@ import { StyledLessonPage } from "../styles/pages/lessonPage";
 const LessonPage = ({ message, lesson }) => {
   return (
     <StyledLessonPage>
-      <div>
+      <main className="main-action">
         <h1 className="title">Como escolher a tipografia</h1>
         <h2 className="subtitle">Fundamentos do Design</h2>
         <div className="screen"></div>
-        <div className="tabs">
-          <div>Notes</div>
-          <div>Resources</div>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien est
-          adipiscing arcu, cursus. Sit quam eu augue tempor aenean nunc ipsum
-          pharetra, amet.
-        </p>
-      </div>
+        <InfoTabs />
+      </main>
       <LessonsGuide />
     </StyledLessonPage>
   );

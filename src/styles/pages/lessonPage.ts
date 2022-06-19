@@ -4,6 +4,10 @@ export const StyledLessonPage = styled.div`
   display: flex;
   gap: 40px;
 
+  .main-action {
+    width: 100%;
+  }
+
   .title {
     font-size: 20px;
     font-weight: 500;
@@ -13,7 +17,6 @@ export const StyledLessonPage = styled.div`
     font-size: 16px;
     font-weight: 400;
     margin-top: 8px;
-    margin-bottom: 40px;
   }
 
   .screen {
@@ -21,5 +24,6 @@ export const StyledLessonPage = styled.div`
     aspect-ratio: 16/9;
     background-color: ${({ theme }) => theme.black};
     border-radius: 16px;
+    margin: 40px 0;
   }
 `;
