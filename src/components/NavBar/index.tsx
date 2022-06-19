@@ -23,13 +23,17 @@ const NavBar = () => {
   };
 
   return (
-    <StyledNavBar>
+    <StyledNavBar shrink={shrink}>
       <h1 className="logo">{shrink ? "M" : "My-Platform"}</h1>
       <div className="tabs">
         <Tab shrink={shrink} label="Home" Icon={House} active />
         <Tab shrink={shrink} label="Logout" Icon={Logout} />
       </div>
-      {!shrink && <CardUpgrade />}
+      {!shrink && (
+        <div className="card-upgrade">
+          <CardUpgrade />
+        </div>
+      )}
     </StyledNavBar>
   );
 };

@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const StyledCardUpgrade = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 100%;
-  margin-left: 40px;
   gap: 16px;
   border-radius: 8px;
   padding: 16px;

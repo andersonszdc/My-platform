@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const StyledNavBar = styled.div`
+type StyledNavBarProps = {
+  shrink: boolean;
+};
+
+export const StyledNavBar = styled.div<StyledNavBarProps>`
   display: grid;
   grid-template-rows: auto 1fr auto;
   flex-direction: column;
@@ -16,6 +20,11 @@ export const StyledNavBar = styled.div`
 
   .tabs {
     margin-top: 80px;
+    padding-right: ${({ shrink }) => (shrink ? "20px" : "40px")};
+  }
+
+  .card-upgrade {
+    margin: 0 40px;
   }
 `;
 
