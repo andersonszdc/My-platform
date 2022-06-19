@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledCard = styled.div`
+export const StyledLessonCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

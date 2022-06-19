@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../../components/Card";
+import LessonCard from "../../components/LessonCard";
 import { StyledClasses } from "./styles";
 
 const Classes: React.FC = () => {
@@ -7,10 +7,10 @@ const Classes: React.FC = () => {
     <StyledClasses>
       <h2 className="label">Módulos</h2>
       <div className="cards">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <LessonCard />
+        <LessonCard />
+        <LessonCard />
+        <LessonCard />
       </div>
     </StyledClasses>
   );
