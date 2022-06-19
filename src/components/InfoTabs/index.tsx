@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { StyledInfoTab, StyledInfoTabs } from "./styles";
+import ResourceCard from "../ResourceCard";
+import { StyledInfoContents, StyledInfoTab, StyledInfoTabs } from "./styles";
 
 const InfoTabs = () => {
   const [currentTab, setCurrentTab] = useState("");
@@ -17,8 +18,19 @@ const InfoTabs = () => {
           Resources
         </InfoTab>
       </StyledInfoTabs>
-      {currentTab === "" && <div>notes</div>}
-      {currentTab === "resources" && <div>resources</div>}
+      <StyledInfoContents>
+        {currentTab === "" && (
+          <div className="notes">
+            <p>Aula sobre tipografias com o Anderson.</p>
+          </div>
+        )}
+        {currentTab === "resources" && (
+          <div className="resource-cards">
+            <ResourceCard />
+            <ResourceCard />
+          </div>
+        )}
+      </StyledInfoContents>
     </>
   );
 };

@@ -15,3 +15,16 @@ export const StyledInfoTab = styled.section`
     background-color: ${({ theme }) => theme.blue};
   }
 `;
+
+export const StyledInfoContents = styled.div`
+  .notes {
+    margin-top: 24px;
+  }
+
+  .resource-cards {
+    display: grid;
+    gap: 16px;
+
+    margin-top: 24px;
+  }
+`;

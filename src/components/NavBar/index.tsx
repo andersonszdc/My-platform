@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { getAuth, signOut } from "@firebase/auth";
-import { Icon, StyledNavBar, StyledTab } from "./styles";
-import theme from "../../styles/colors";
+import { StyledNavBar, StyledTab } from "./styles";
 import CardUpgrade from "../CardUpgrade";
 import House from "../../assets/Icons/House";
 import Logout from "../../assets/Icons/Logout";
@@ -27,7 +26,7 @@ const NavBar = () => {
       <h1 className="logo">{shrink ? "M" : "My-Platform"}</h1>
       <div className="tabs">
         <Tab shrink={shrink} label="Home" Icon={House} active />
-        <Tab shrink={shrink} label="Logout" Icon={Logout} />
+        <Tab shrink={shrink} label="Logout" Icon={Logout} onClick={SignOut} />
       </div>
       {!shrink && (
         <div className="card-upgrade">
@@ -45,11 +44,12 @@ type TabProps = {
   active?: boolean;
   label: string;
   shrink: boolean;
+  onClick?: () => void;
 };
 
-const Tab = ({ Icon, active, label, shrink }: TabProps) => {
+const Tab = ({ Icon, active, label, shrink, onClick }: TabProps) => {
   return (
-    <StyledTab shrink={shrink} active={active}>
+    <StyledTab onClick={onClick} shrink={shrink} active={active}>
       {Icon && <Icon />}
       {!shrink && <p>{label}</p>}
     </StyledTab>
