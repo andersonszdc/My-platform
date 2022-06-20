@@ -1,14 +1,14 @@
 import React from "react";
 import CustomButton from "../CustomButton";
-import { StyledCardUpgrade } from "./styles";
+import { StyledUpgradeCard } from "./styles";
 
-const CardUpgrade = () => {
+const UpgradeCard = () => {
   return (
-    <StyledCardUpgrade>
+    <StyledUpgradeCard>
       <h2>Aproveite mais a plataforma!</h2>
       <CustomButton type="3">Fazer upgrade</CustomButton>
-    </StyledCardUpgrade>
+    </StyledUpgradeCard>
   );
 };
 
-export default CardUpgrade;
+export default UpgradeCard;

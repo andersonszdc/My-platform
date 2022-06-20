@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledCardUpgrade = styled.div`
+export const StyledUpgradeCard = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;

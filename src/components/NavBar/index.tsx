@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { getAuth, signOut } from "@firebase/auth";
 import { StyledNavBar, StyledTab } from "./styles";
-import CardUpgrade from "../CardUpgrade";
+import UpgradeCard from "../UpgradeCard";
 import House from "../../assets/Icons/House";
 import Logout from "../../assets/Icons/Logout";
 import { IconProps } from "../../assets/Icons/types";
@@ -36,7 +36,7 @@ const NavBar = () => {
       </div>
       {!shrink && (
         <div className="card-upgrade">
-          <CardUpgrade />
+          <UpgradeCard />
         </div>
       )}
     </StyledNavBar>
