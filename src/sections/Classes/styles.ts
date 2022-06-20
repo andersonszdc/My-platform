@@ -6,9 +6,10 @@ export const StyledClasses = styled.section`
     font-weight: 400;
     margin: 40px 0;
   }
+
   .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 16px;
   }
 `;
