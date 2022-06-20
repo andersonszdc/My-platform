@@ -6,6 +6,7 @@ type StyledNavBarProps = {
 };
 
 export const StyledNavBar = styled.div<StyledNavBarProps>`
+  ${({ shrink }) => !shrink && `box-shadow: 2px 0px 20px hsla(0,0%,0%, .50);`}
   display: grid;
   z-index: 1;
   position: relative;
@@ -15,7 +16,7 @@ export const StyledNavBar = styled.div<StyledNavBarProps>`
   flex-direction: column;
   height: 100%;
   padding: 40px 0;
-  border-radius: 16px;
+  border-radius: 0px 8px 8px 0px;
 
   .logo {
     font-size: 24px;
