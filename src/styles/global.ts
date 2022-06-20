@@ -12,6 +12,9 @@ export default createGlobalStyle`
         font-size: inherit;
         font-weight: inherit;
         color: inherit;
+        :focus {
+           outline: none;
+        }
     }
 
     button {
